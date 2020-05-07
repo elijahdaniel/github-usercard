@@ -1,4 +1,5 @@
-axios.get('https://api.github.com/users/elijahdaniel')
+axios
+  .get('https://api.github.com/users/elijahdaniel')
   .then (data => {
     const myInfo = data.data;
     const cards = document.querySelector('.cards');
@@ -60,7 +61,8 @@ const followersArray = [
 ];
 
 followersArray.forEach((user) => {
-  axios.get(`https://api.github.com/users/${user}`)
+  axios
+    .get(`https://api.github.com/users/${user}`)
     .then (data => {
       const myInfo = data.data;
       const cards = document.querySelector('.cards');
